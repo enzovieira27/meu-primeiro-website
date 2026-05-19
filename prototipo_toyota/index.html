@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota</title>
+
+    <style>
+        body {
+            align-items: center;
+            justify-content: center;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: rgb(255, 255, 255);
+        }
+
+        /* TOPO */
+        .topo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            position: relative;
+        }
+
+        .logo {
+            width: 200px;
+            border-radius: 20px;
+        }
+
+        .botoes {
+            display: flex;
+            gap: 10px;
+        }
+
+        .login,
+        .menu {
+            background-color: rgba(255, 255, 255, 0.904);
+            color: rgb(54, 54, 54);
+            border-radius: 20px;
+            border: none;
+            padding: 5px 15px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .login:hover,
+        .menu:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* MENU */
+
+        .menu-opcoes {
+            display: none;
+            position: absolute;
+            right: 20px;
+            top: 70px;
+            background: white;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        }
+
+        .menu-opcoes p {
+            cursor: pointer;
+            margin: 10px;
+        }
+
+
+        /* LOGIN */
+
+        .login-box {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+            width: 250px;
+        }
+
+        .login-box input {
+            width: 100%;
+            margin-top: 10px;
+            padding: 8px;
+            border-radius: 10px;
+            border: 1px solid gray;
+        }
+
+        .login-box button {
+            margin-top: 10px;
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        /* CARDS */
+
+        .container-cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .sw4,
+        .hillux,
+        .tacomma,
+        .tundra,
+        .corolla,
+        .yaris,
+        .hiace,
+        .rav4,
+        .supra,
+        .sienna {
+
+            width: 200px;
+            height: 200px;
+            background: white;
+            border-radius: 20px;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+        .sw4:hover,
+        .hillux:hover,
+        .tacomma:hover,
+        .tundra:hover,
+        .corolla:hover,
+        .yaris:hover,
+        .hiace:hover,
+        .rav4:hover,
+        .supra:hover,
+        .sienna:hover {
+
+            transform: translateY(-5px);
+            box-shadow: 0 10px 8px rgba(107, 106, 106, .6);
+        }
+
+        h2 {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .sw4 img,
+        .rav4 img,
+        .supra img,
+        .sienna img {
+            width: 200px;
+        }
+
+        .hillux img,
+        .tacomma img,
+        .tundra img,
+        .corolla img,
+        .yaris img,
+        .hiace img {
+
+            width: 180px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topo">
+
+        <img class="logo" src="https://freepnglogo.com/images/all_img/1731433480_toyota-logo-black.png">
+
+        <div class="botoes">
+            <button class="menu">MENU</button>
+            <button class="login">LOGIN</button>
+        </div>
+
+        <div class="menu-opcoes" id="menuOpcoes">
+            <p>Início</p>
+            <p>Veículos</p>
+            <p>Contato</p>
+        </div>
+
+    </div>
+
+
+    <div class="login-box" id="loginBox">
+
+        <h3>Login</h3>
+
+        <input type="text" id="usuario" placeholder="Usuário">
+
+        <input type="password" id="senha" placeholder="Senha">
+
+        <button id="entrar">Entrar</button>
+        <button id="fechar">Fechar</button>
+
+    </div>
+
+
+    <div class="container-cards">
+
+        <div class="sw4" id="sw4">
+            <img src="https://www.pngmart.com/files/22/Toyota-SW4-PNG-File.png">
+            <h2>SW4</h2>
+        </div>
+
+        <div class="hillux" id="hillux">
+            <img src="https://imgcdn.oto.com/large/gallery/color/38/387/toyota-hilux-color-794473.jpg">
+            <h2>HILUX</h2>
+        </div>
+
+        <div class="tacomma" id="tacomma">
+            <img src="https://www.pngplay.com/wp-content/uploads/13/Toyota-Tacoma-PNG-Photo-Image.png">
+            <h2>TACOMA</h2>
+        </div>
+
+        <div class="tundra" id="tundra">
+            <img
+                src="TUNDRA.png">
+            <h2>TUNDRA</h2>
+        </div>
+
+        <div class="corolla" id="corolla">
+            <img src="COROLLA.png">
+            <h2>COROLLA</h2>
+        </div>
+
+        <div class="yaris" id="yaris">
+            <img src="YARIS.png">
+            <h2>YARIS</h2>
+        </div>
+
+        <div class="hiace" id="hiace">
+            <img src="HIACE.png">
+            <h2>HIACE</h2>
+        </div>
+
+        <div class="rav4" id="rav4">
+            <img src="RAV4.png">
+            <h2>RAV4</h2>
+        </div>
+
+        <div class="supra" id="supra">
+            <img src="https://cdn.motor1.com/images/mgl/NXLeX/s4/2020-toyota-supra-heritage-edition.jpg">
+            <h2>SUPRA</h2>
+        </div>
+
+        <div class="sienna" id="sienna">
+            <img src="SIENNA.png">
+            <h2>SIENNA</h2>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        /* CARDS */
+
+        document.getElementById("sw4").onclick = () => {
+            window.location = "https://www.toyota.com.br/modelos/sw4"
+        }
+
+        document.getElementById("hillux").onclick = () => {
+            window.location = "https://www.toyota.com.br/modelos/hilux-cabine-dupla"
+        }
+
+        document.getElementById("tacomma").onclick = () => {
+            window.location = "https://www.toyota.com/tacoma/"
+        }
+
+        document.getElementById("tundra").onclick = () => {
+            window.location = "https://www.toyota.com/tundra/"
+        }
+
+        document.getElementById("corolla").onclick = () => {
+            window.location = "https://www.toyota.com.br/modelos/corolla"
+        }
+
+        document.getElementById("yaris").onclick = () => {
+            window.location = "https://autoesporte.globo.com"
+        }
+
+        document.getElementById("hiace").onclick = () => {
+            window.location = "https://www.toyota.com.br/modelos/hiace-furgao"
+        }
+
+        document.getElementById("rav4").onclick = () => {
+            window.location = "https://www.toyota.com.br/modelos/rav4"
+        }
+
+        document.getElementById("sienna").onclick = () => {
+            window.location = "https://www.webmotors.com.br"
+        }
+
+
+        /* MENU */
+
+        let menu = document.querySelector(".menu");
+        let menuOpcoes = document.getElementById("menuOpcoes");
+
+        menu.onclick = () => {
+
+            if (menuOpcoes.style.display == "block") {
+                menuOpcoes.style.display = "none";
+            }
+            else {
+                menuOpcoes.style.display = "block";
+            }
+
+        }
+
+
+        /* LOGIN */
+
+        let login = document.querySelector(".login");
+        let loginBox = document.getElementById("loginBox");
+
+        login.onclick = () => {
+
+            loginBox.style.display = "block";
+
+        }
+
+
+        document.getElementById("fechar").onclick = () => {
+
+            loginBox.style.display = "none";
+
+        }
+
+
+        document.getElementById("entrar").onclick = () => {
+
+            let usuario = document.getElementById("usuario").value;
+            let senha = document.getElementById("senha").value;
+
+            if (usuario == "admin" && senha == "1234") {
+
+                alert("Login realizado com sucesso");
+
+            }
+            else {
+
+                alert("Usuário ou senha incorretos");
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
